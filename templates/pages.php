@@ -1,4 +1,11 @@
 <?php
+$listeJS = array(
+    "caroussel/js/jquery.elastislide.js",
+    "js/caroussel.js",
+    "lightbox/js/prototype.js",
+    "lightbox/js/scriptaculous.js?load=effects,builder",
+    "lightbox/js/lightbox.js"
+);
 require_once(TEMPLATE . 'header.php');
 ?>
 <div id="content-wrapper" class="clearfix row">

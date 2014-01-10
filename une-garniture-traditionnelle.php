@@ -1,5 +1,11 @@
 <?php
 define("PAGE", "garniture");
+$listeJS = array(
+    "js/main.js",
+    "lightbox/js/prototype.js",
+    "lightbox/js/scriptaculous.js?load=effects,builder",
+    "lightbox/js/lightbox.js"
+);
 require_once(dirname(__FILE__) . '/config/conf.php');
 require_once(TEMPLATE . 'header.php');
 ?>

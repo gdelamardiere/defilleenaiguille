@@ -1,6 +1,14 @@
 <?php
 define("PAGE", "prestations");
 require_once(dirname(__FILE__) . '/config/conf.php');
+$listeJS = array(
+);
+$listeCSS = array("css/modal.css",
+    "css/tableau.css",
+    "css/libs/jquery.contextMenu.css",
+    "css/transactions.css",
+    "js/libs/autocompletion/css/ui-lightness/jquery-ui-1.10.3.custom.css",
+    "js/libs/datepicker/css/datepicker.css");
 require_once(TEMPLATE . 'header.php');
 ?>
 <div id="content-wrapper" class="clearfix row">
