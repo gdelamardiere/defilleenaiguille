@@ -4061,8 +4061,8 @@ pre .chunk {
 
 
 /*polaroid*/
-ul.polaroids li {
-    /* display: inline;*/
+ul.polaroids {
+    list-style-type:none;
 }
 ul.polaroids a {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -4098,15 +4098,15 @@ ul.polaroids li:nth-child(n) a {
     position: relative;
     right: 5px;
     top: 8px;
-    -moz-transform:rotate(-5deg); 
-    -webkit-transform:rotate(-5deg); 
-    -o-transform:rotate(-5deg); 
+    -moz-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
 }
 ul.polaroids li:nth-child(2n) a {
     /*transform: rotate(7deg);*/
-    -moz-transform:rotate(7deg); 
-    -webkit-transform:rotate(7deg); 
-    -o-transform:rotate(7deg); 
+    -moz-transform:rotate(7deg);
+    -webkit-transform:rotate(7deg);
+    -o-transform:rotate(7deg);
 
 }
 ul.polaroids li:nth-child(3n) a {
@@ -4118,9 +4118,9 @@ ul.polaroids li:nth-child(3n) a {
 ul.polaroids li:nth-child(5n) a {
     position: relative;
     right: 5px;
-    -moz-transform:rotate(-5deg); 
-    -webkit-transform:rotate(-5deg); 
-    -o-transform:rotate(-5deg); 
+    -moz-transform:rotate(-5deg);
+    -webkit-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
 }
 
 ul.polaroids li:nth-child(11n) a {
@@ -4151,9 +4151,9 @@ ul.polaroids li a:hover {
     right: 25px;
     top: 25px;
     transform: rotate(8deg);
-    -moz-transform:rotate(8deg); 
-    -webkit-transform:rotate(8deg); 
-    -o-transform:rotate(8deg); 
+    -moz-transform:rotate(8deg);
+    -webkit-transform:rotate(8deg);
+    -o-transform:rotate(8deg);
     width: 200px;
 }
 
@@ -4175,16 +4175,19 @@ ul.polaroids li a:hover {
 
 #garniture {
     margin:auto;
-    width: 700px;
+    width: 845px;
+
 }
 #garniture li {
     display: inline;
     padding:5px;
+    list-style-type:none;
 }
 
 #garniture li img {
-    width:130px;
+    height:120px;
 }
+
 
 
 /*carousel*/
@@ -4199,11 +4202,16 @@ ul.polaroids li a:hover {
     overflow: hidden;
 }
 
+.carousel-inner li {
+    list-style-type:none;
+}
+
 .carousel-inner > .item {
     position: relative;
     display: none;
     -webkit-transition: 0.6s ease-in-out left;
     transition: 0.6s ease-in-out left;
+    text-align: center;
 }
 
 .carousel-inner > .item > img,
@@ -4386,4 +4394,21 @@ ul.polaroids li a:hover {
     .carousel-indicators {
         bottom: 20px;
     }
+}
+
+#garniture a:after {
+    content: attr(title);
+    position: absolute;
+    top:125px;
+    left:0;
+    width:160px;
+    text-align: center;
+}
+
+#garniture li {
+    position: relative;
+    display: inline-table;
+    list-style-type: none;
+    text-align: center;
+    width: 165px;
 }

@@ -72,3 +72,10 @@ define('SUFFIX_SALT', '151SDds*^d12f*%df.s1');
 
 require_once(REP_CLASSE . '/divers.class.php');
 spl_autoload_register('divers::my_autoloader');
+
+/*
+ * configuration des images
+ */
+DEFINE("MINIATURE_HEIGHT", 120);
+DEFINE("MINIATURE_WIDTH", 300);
+DEFINE("MEDIUM_HEIGHT", 360);

@@ -7,6 +7,7 @@ $listeJS = array(
     "lightbox/js/lightbox.js"
 );
 require_once(TEMPLATE . 'header.php');
+$mainImage = divers::getOneRandomImageFromRep(PAGE . "/medium/");
 ?>
 <div id="content-wrapper" class="clearfix row">
     <div id="main-content">
@@ -15,7 +16,9 @@ require_once(TEMPLATE . 'header.php');
         <div class="texte-right" ><?php include_once(REP_DATA . PAGE . '.html'); ?></div>
 
         <div class="image-left">
-            <img src="<?php echo divers::getOneRandomImageFromRep(PAGE . "/"); ?>" alt="<?php echo PAGE; ?>">
+            <a href="<?php echo FRONT_IMAGE . PAGE . "/" . $mainImage; ?>" rel="lightbox">
+                <img src="<?php echo FRONT_IMAGE . PAGE . "/medium/" . $mainImage; ?>" alt="<?php echo PAGE; ?>">
+            </a>
         </div>
     </div>
     <div class="bloc-caroussel">

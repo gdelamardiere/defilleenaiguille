@@ -502,7 +502,7 @@ class divers
         $nb = count($listeImage);
         $image = "";
         if ($nb > 0) {
-            $image = FRONT_IMAGE . $rep . $listeImage[rand(0, $nb - 1)];
+            $image = $listeImage[rand(0, $nb - 1)];
         }
         return $image;
     }

@@ -20,7 +20,7 @@ require_once(TEMPLATE . 'header.php');
             <?php
             for ($i = 1; $i <= 5; $i++) {
                 $image = divers::getOneRandomImageFromRep(PAGE . "/etape" . $i . "/small/");
-                echo '<li><a class="listeetapes" id="etape' . $i . '" href="#"><img src="' . $image . '" alt="' . $image . '" /></a></li>';
+                echo '<li><a class="listeetapes" title="titre étape' . $i . '" id="etape' . $i . '" href="#"><img src="' . FRONT_IMAGE . PAGE . "/etape" . $i . "/small/" . $image . '" alt="titre étape' . $i . '"/></a></li>';
             }
             ?>
         </ul>
