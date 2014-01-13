@@ -14,7 +14,6 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <link rel="stylesheet" type="text/css" href="caroussel/css/elastislide.css" />
-        <link rel="stylesheet" type="text/css" href="caroussel/css/custom.css" />
         <link rel="stylesheet" href="lightbox/css/lightbox.css" type="text/css" media="screen" />
     </head>
     <body>
@@ -26,7 +25,7 @@
             <div id="logo-events" class="constrain clearfix">
                 <h2 class="logo"><a href="http://defilleenaiguille" title="De Fille en aiguille">De Fille en aiguille</a></h2>
 
-                <aside><div id="broadcast"></div></aside>
+
             </div>
 
             <nav id="main" class="constrain clearfix">
