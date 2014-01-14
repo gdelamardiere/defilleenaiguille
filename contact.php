@@ -39,7 +39,7 @@ require_once(TEMPLATE . 'header.php');
                     <input type="text" name="nom" placeholder="Votre nom">
                     <label>Email</label>
                     <div class="input-prepend">
-                        <input type="text" name="email" id="inputIcon" class="form-control"  data-validation="email" placeholder="Votre email">
+                        <input type="text" name="email" id="inputIcon" class="form-control"  data-validation="required email" placeholder="Votre email">
                     </div>
                     <label>Sujet</label>
                     <input type="text" name="sujet" class="span3" placeholder="Sujet">

@@ -625,7 +625,7 @@ nav#main {
 nav#main ul {
     margin: 0;
     float: left;
-    width: 70%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
