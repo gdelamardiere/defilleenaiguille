@@ -1,5 +1,6 @@
 <?php
 $listeJS = array(
+    "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
     "caroussel/js/jquery.elastislide.js",
     "js/caroussel.js",
     "lightbox/js/prototype.js",

@@ -56,10 +56,10 @@ define("FRONT_ADMINISTRATION", SITE_FRONT . "administration/");
  * configuration des MAILS
  */
 //A CHANGER EN PRODUCTION
-define('MAIL_FROM', "GOLF");
+define('MAIL_FROM', "defilleenaiguille");
 //A CHANGER EN PRODUCTION
 define('MAIL_FROM_EMAIL', "gdeveilleche@webmail.alten.fr");
-define('LOCAL_MAIL', 'gdeveilleche@webmail.alten.fr');
+define('SEND_MAIL', 'gdelamardiere@gmail.com');
 
 
 

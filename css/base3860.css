@@ -241,7 +241,10 @@ textarea {
 button,
 input {
     line-height: normal;
+
 }
+
+
 
 /*
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -331,12 +334,12 @@ textarea {
     resize: vertical;
 }
 
-#content input[type="text"],
-#content input[type="email"],
-#content textarea {
+#contentContact input[type="text"],
+#contentContact input[type="email"],
+#contentContact textarea {
     color: #666;
-
-    width: 70%;
+    display:inherit;
+    width: 100%;
     min-width: 300px;
 
     margin: 5px 0 10px 0;
@@ -345,7 +348,7 @@ textarea {
     background: rgba(245,245,245,0.37);
 
     border: 1px solid rgba(192,192,192,0.49);
-    border-radius: 2px;
+    border-radius: 6px;
 
     -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.17);
     box-shadow:         inset 0 1px 3px rgba(0,0,0,0.17);
@@ -2081,5 +2084,96 @@ ul.polaroids li a:hover {
     display: inline-table;
     list-style-type: none;
     text-align: center;
-    width: 165px;
+}
+
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #EBEBEB;
+    border-color: #ADADAD;
+    color: #333333;
+}
+.btn:active, .btn.active {
+    background-image: none;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
+    outline: 0 none;
+}
+.btn {
+    margin-bottom: 5px;
+}
+.btn-default {
+    background-color: #FFFFFF;
+    border-color: #CCCCCC;
+    color: #333333;
+}
+.btn {
+    -moz-user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+h1.presentationContact {
+    font-size: 17px;
+    padding-right: 230px;
+    text-align: right;
+    font-weight: normal;
+    margin-top: 10px;
+}
+h2.presentationContact {
+    font-size: 17px;
+    padding-right: 170px;
+    text-align: right;
+    font-weight: normal;
+}
+h3.presentationContact {
+    font-size: 17px;
+    padding-right: 130px;
+    text-align: right;
+    font-weight: normal;
+    margin: 0 0 0.5em;
+}
+
+.nomContact {
+    font-size: 16px;
+    line-height: 40px;
+    position: relative;
+    right: 100px;
+}
+
+
+
+
+.texteContact > h3 {
+    margin-top: 8px;
+    text-align: center;
+}
+
+#contentContact{
+    float: left;
+    width: 42%;
+}
+
+.plan {
+    padding-right: 130px;
+    text-align: right;
+    font-weight: normal;
+    margin: 0 0 0.5em;
+}
+
+
+.texteContactright {
+    text-align: center;
+}
+
+.form-error{
+    color:red;
 }
