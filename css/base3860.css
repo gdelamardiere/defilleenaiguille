@@ -1842,19 +1842,20 @@ ul.polaroids li a:hover {
     width: 40%;
 }
 .bloc-caroussel{
-    width:80%;
-    margin:20px auto 20px auto;
+    margin:10px auto 20px;
+    text-align: center;
 }
 
 #garniture {
     margin:auto;
-    width: 855px;
-
 }
 #garniture li {
-    display: inline;
     padding:5px;
     list-style-type:none;
+    padding-top: 20px;
+    position: relative;
+    display: inline-table;
+    text-align: center;
 }
 
 #garniture li img {
@@ -1862,6 +1863,14 @@ ul.polaroids li a:hover {
     max-width: 165px;
 }
 
+#garniture a:after {
+    content: attr(title);
+    position: absolute;
+    top:140px;
+    left:0;
+    width:160px;
+    text-align: center;
+}
 
 
 /*carousel*/
@@ -2070,21 +2079,7 @@ ul.polaroids li a:hover {
     }
 }
 
-#garniture a:after {
-    content: attr(title);
-    position: absolute;
-    top:125px;
-    left:0;
-    width:160px;
-    text-align: center;
-}
 
-#garniture li {
-    position: relative;
-    display: inline-table;
-    list-style-type: none;
-    text-align: center;
-}
 
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
