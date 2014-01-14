@@ -1226,8 +1226,24 @@ footer .bottom { margin: 0 10% 0 0; }
         margin-right: auto;
     }
 }
-
+#prestations-texte{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    transform: rotate(8deg);
+    -moz-transform:rotate(8deg);
+    -webkit-transform:rotate(8deg);
+    -o-transform:rotate(8deg);
+    width: 200px;
+}
 @media only screen and (max-width: 480px) {
+
+    #prestations-texte{
+        position:inherit;
+        transform: none;
+        width:100%;
+        margin-bottom:10px;
+    }
 
     #global-nav {
         display: none;
@@ -1245,18 +1261,42 @@ footer .bottom { margin: 0 10% 0 0; }
     .tinynav-container {
         display: block;
     }
-
-    #menu-top {
-        display: none;
+    /*
+        #menu-top {
+            display: none;
+        }
+    */
+    nav#main li a,nav#main li a:hover,nav#main li a:active,nav#main li a:focus,nav#main li.current a{
+        color: #000;
     }
-
-    .tinynav {
-        display: block;
-        width: 100%;
-        margin: 0 auto 15px;
-        position: relative;
-        top: 6px;
-        left: 0px;
+    nav#main li a:hover, nav#main li a:focus, nav#main li a:active {
+        box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.125) inset;
+    }
+    #menu-top li:active, #menu-top li.current {
+        box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.225) inset;
+    }
+    #menu-top li {
+        margin: 5px;
+    }
+    #menu-top li {
+        background-color: #FFFFFF;
+        border-color: #CCCCCC;
+        color: #333333;
+    }
+    #menu-top li {
+        -moz-user-select: none;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
     }
 
     nav#main {
@@ -1819,16 +1859,7 @@ ul.polaroids li a:hover {
     background-color: #F0F0DF;
 }
 
-#prestations-texte{
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    transform: rotate(8deg);
-    -moz-transform:rotate(8deg);
-    -webkit-transform:rotate(8deg);
-    -o-transform:rotate(8deg);
-    width: 200px;
-}
+
 
 .texte-right{
     float:right;
