@@ -5,10 +5,11 @@ class image
 
     public static function redimensionnerImageFromRep($rep, $forcage = false)
     {
+        self::redimensionnerImageMaxFromRep($rep);
         $rep = (substr($rep, -1, 1) == "/") ? $rep : $rep . "/";
         if ($forcage) {
             $listeImageToSmall = divers::listeImageFromRep(REP_IMAGE . $rep);
-            $listeImageToMedium = divers::listeImageFromRep(REP_IMAGE . $rep);
+            $listeImageToMedium = $listeImageToSmall;
         } else {
             $listeImageBig = divers::listeImageFromRep(REP_IMAGE . $rep);
             $listeImageSmall = divers::listeImageFromRep(REP_IMAGE . $rep . "small/");
@@ -31,6 +32,15 @@ class image
             foreach ($listeImageToMedium as $image) {
                 self::createMiniature(REP_IMAGE . $rep . $image, REP_IMAGE . $rep . "medium/" . $image, $width = 0, $height = MEDIUM_HEIGHT);
             }
+        }
+    }
+
+    public static function redimensionnerImageMaxFromRep($rep)
+    {
+        $rep = (substr($rep, -1, 1) == "/") ? $rep : $rep . "/";
+        $listeImage = divers::listeImageFromRep(REP_IMAGE . $rep);
+        foreach ($listeImage as $image) {
+            self::createMiniature(REP_IMAGE . $rep . $image, REP_IMAGE . $rep . $image, $width = 0, $height = IMAGE_MAX_HEIGHT);
         }
     }
 

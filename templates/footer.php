@@ -3,7 +3,7 @@
 <footer class="clearfix simple">
     <ul class="footer-site-links">
         <!-- <li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li> -->
-        <li><a>Tapissier décorateur</a></li>
+        <li><a href="<?php echo SITE_FRONT; ?>">Tapissier décorateur</a></li>
     </ul>
 </div>
 </footer>

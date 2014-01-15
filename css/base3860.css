@@ -598,7 +598,7 @@ h2.logo a {
     overflow: hidden;
     text-indent: -1000px;
     width: 243px;
-    background: url(images/logo-defilleenaiguille.png) no-repeat;
+    background: url(images/logo-defilleenaiguille.jpg) no-repeat;
 }
 
 
@@ -726,8 +726,8 @@ hr {
     padding-top: 5px;
     padding-left: 20px;
     line-height: 20px;
-    list-style-type: none;
-    background: url(images/bullet.png) no-repeat 0 10px;
+    /*list-style-type: none;*/
+    list-style-image: url("li.jpg");
 }
 
 #content ul.block-grid li {
@@ -896,13 +896,7 @@ hr {
 
 footer {
     /*background: url(images/bg-footer-noise.jpg) repeat;*/
-    margin-top: -20px;
-    padding-top: 40px;
-}
-
-footer.simple {
-    padding-top: 45px;
-    padding-bottom: 10px;
+    margin-top: 10px;
 }
 
 
@@ -944,8 +938,14 @@ footer .footer-site-links li a:before {
 }
 
 footer .footer-site-links li:hover a,
+footer .footer-site-links li a,
 footer .footer-site-links li:hover a:before {
-    color: #e6e6e6;
+    font-family: 'Tangerine', cursive;
+    font-size: 44px;
+    line-height: 40px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
 }
 
 .footer-site-links li { display: inline-block; }
@@ -1772,7 +1772,7 @@ that IE7/8 do not support :nth-child.
 
 /*polaroid*/
 ul.polaroids {
-    list-style-type:none;
+    /*list-style-type:none;*/
 }
 ul.polaroids a {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -1829,13 +1829,13 @@ ul.polaroids li:nth-child(3n) a {
     transform: none;
 
 }
-
+/*
 ul.polaroids li:nth-child(4n) a {
     left: 34%;
     position: absolute;
     right: auto;
     top: 53%;
-}
+}*/
 
 ul.polaroids li:nth-child(5n) a {
     position: relative;
@@ -2234,3 +2234,15 @@ h3.presentationContact {
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
     padding: 3px;
 }
+
+/*
+
+#container {
+    background: none repeat scroll 0 0 #31438F;
+}
+body {
+    background-color: #31438F;
+}
+h2.logo a {
+    background: url("images/logo-defilleenaiguille.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}*/

@@ -1,15 +1,16 @@
 <?php
 
+set_time_limit(0);
 require_once(dirname(__FILE__) . '/../config/conf.php');
-
-image::redimensionnerImageFromRep("fauteuils", true);
-image::redimensionnerImageFromRep("coussins", true);
-image::redimensionnerImageFromRep("rideau", true);
-image::redimensionnerImageFromRep("lit", true);
-image::redimensionnerImageFromRep("garniture/etape1", true);
-image::redimensionnerImageFromRep("garniture/etape2", true);
-image::redimensionnerImageFromRep("garniture/etape3", true);
-image::redimensionnerImageFromRep("garniture/etape4", true);
-image::redimensionnerImageFromRep("garniture/etape5", true);
-image::redimensionnerImageFromRep("mursetfenetres", true);
-image::redimensionnerImageFromRep("teinture_murale", true);
+$all = (isset($_GET['all'])) ? true : false;
+image::redimensionnerImageFromRep("fauteuils", $all);
+image::redimensionnerImageFromRep("coussins", $all);
+image::redimensionnerImageFromRep("rideau", $all);
+image::redimensionnerImageFromRep("lit", $all);
+image::redimensionnerImageFromRep("garniture/etape1", $all);
+image::redimensionnerImageFromRep("garniture/etape2", $all);
+image::redimensionnerImageFromRep("garniture/etape3", $all);
+image::redimensionnerImageFromRep("garniture/etape4", $all);
+image::redimensionnerImageFromRep("garniture/etape5", $all);
+image::redimensionnerImageFromRep("mursetfenetres", $all);
+image::redimensionnerImageFromRep("teinture_murale", $all);

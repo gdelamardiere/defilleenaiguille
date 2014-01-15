@@ -11,6 +11,7 @@
 
 .elastislide-carousel ul li {
     min-width: 20px; /* minimum width of the image (min width + border) */
+    cursor:  pointer;
 }
 
 .elastislide-wrapper {

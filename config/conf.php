@@ -77,5 +77,5 @@ spl_autoload_register('divers::my_autoloader');
  * configuration des images
  */
 DEFINE("MINIATURE_HEIGHT", 120);
-DEFINE("MINIATURE_WIDTH", 300);
+DEFINE("IMAGE_MAX_HEIGHT", 700);
 DEFINE("MEDIUM_HEIGHT", 360);
