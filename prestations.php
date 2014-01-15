@@ -22,27 +22,27 @@ require_once(TEMPLATE . 'header.php');
                 <ul class="polaroids large-block-grid-4 small-block-grid-2">
                     <li>
                         <a title="les fauteuils" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "fauteuils/medium/" . divers::getOneRandomImageFromRep("fauteuils/"); ?>" alt="fauteuil">
+                            <img src="<?php echo FRONT_IMAGE . "fauteuils/medium/" . divers::getOneRandomImageFromRep("fauteuils/medium/"); ?>" alt="fauteuil">
                         </a>
                     </li>
                     <li>
                         <a title="la teinture murale" href="<?php echo SITE_FRONT; ?>murs-et-fenetres.php">
-                            <img src="<?php echo FRONT_IMAGE . "coussins/medium/" . divers::getOneRandomImageFromRep("coussins/"); ?>" alt="la teinture murale">
+                            <img src="<?php echo FRONT_IMAGE . "coussins/medium/" . divers::getOneRandomImageFromRep("coussins/medium/"); ?>" alt="la teinture murale">
                         </a>
                     </li>
                     <li>
                         <a title="les rideaux" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "rideau/medium/" . divers::getOneRandomImageFromRep("rideau/"); ?>" alt="les rideaux">
+                            <img src="<?php echo FRONT_IMAGE . "rideau/medium/" . divers::getOneRandomImageFromRep("rideau/medium/"); ?>" alt="les rideaux">
                         </a>
                     </li>
                     <li>
                         <a title="le lit" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "lit/medium/" . divers::getOneRandomImageFromRep("lit/"); ?>" alt="le lit">
+                            <img src="<?php echo FRONT_IMAGE . "lit/medium/" . divers::getOneRandomImageFromRep("lit/medium/"); ?>" alt="le lit">
                         </a>
                     </li>
                     <li>
                         <a title="les coussins" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "coussins/medium/" . divers::getOneRandomImageFromRep("coussins/"); ?>" alt="les coussins">
+                            <img src="<?php echo FRONT_IMAGE . "coussins/medium/" . divers::getOneRandomImageFromRep("coussins/medium/"); ?>" alt="les coussins">
                         </a>
                     </li>
                 </ul>

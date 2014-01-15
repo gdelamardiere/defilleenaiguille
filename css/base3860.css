@@ -86,10 +86,7 @@ h2 {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif !important;
-}
+
 /*
  * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
@@ -513,7 +510,8 @@ body {
 
 }
 body{
-    background: url("images/bg-footer-noise.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-color: #0769AD;
+    /* background: url("images/bg-footer-noise.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
     margin: 0 ;
 }
 
@@ -549,7 +547,7 @@ body{
 
 #container,
 footer {
-    border-top: 1px solid #7ACEF4;
+    /*  border-top: 1px solid #7ACEF4;*/
 }
 
 .jquery-ui #container,
@@ -625,7 +623,7 @@ nav#main {
 nav#main ul {
     margin: 0;
     float: left;
-    width: 100%;
+    width: 70%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -661,9 +659,7 @@ nav#main .searchform {
 /* Typography & Global Styles
    ========================================================================== */
 
-#content a {
-    text-decoration: underline;
-}
+
 
 #content a:hover {
     text-decoration: none;
@@ -899,7 +895,7 @@ hr {
    ========================================================================== */
 
 footer {
-    background: url(images/bg-footer-noise.jpg) repeat;
+    /*background: url(images/bg-footer-noise.jpg) repeat;*/
     margin-top: -20px;
     padding-top: 40px;
 }
@@ -1229,12 +1225,13 @@ footer .bottom { margin: 0 10% 0 0; }
 #prestations-texte{
     position: absolute;
     right: 25px;
-    top: 25px;
+    top: 80px;
     transform: rotate(8deg);
     -moz-transform:rotate(8deg);
     -webkit-transform:rotate(8deg);
     -o-transform:rotate(8deg);
-    width: 200px;
+    width: 370px;
+    font-size: 17px;
 }
 @media only screen and (max-width: 480px) {
 
@@ -1790,6 +1787,7 @@ ul.polaroids a {
     text-decoration: none;
     transform: rotate(-2deg);
     width: auto;
+    font-style: italic;
 }
 ul.polaroids li {
     padding-left: 0;
@@ -1814,6 +1812,8 @@ ul.polaroids li:nth-child(n) a {
     -moz-transform:rotate(-5deg);
     -webkit-transform:rotate(-5deg);
     -o-transform:rotate(-5deg);
+    border: 2px ridge #000000;
+    box-shadow: 11px 15px 8px rgba(0, 0, 0, 0.5);
 }
 ul.polaroids li:nth-child(2n) a {
     /*transform: rotate(7deg);*/
@@ -1827,7 +1827,16 @@ ul.polaroids li:nth-child(3n) a {
     top: 5px;
     right:50px;
     transform: none;
+
 }
+
+ul.polaroids li:nth-child(4n) a {
+    left: 34%;
+    position: absolute;
+    right: auto;
+    top: 53%;
+}
+
 ul.polaroids li:nth-child(5n) a {
     position: relative;
     right: 5px;
@@ -1836,18 +1845,12 @@ ul.polaroids li:nth-child(5n) a {
     -o-transform:rotate(-5deg);
 }
 
-ul.polaroids li:nth-child(11n) a {
-    left: -5px;
-    position: relative;
-    top: 3px;
-}
 ul.polaroids li.messy a {
     left: 160px;
     margin-top: -400px;
     position: relative;
 }
 ul.polaroids li a:hover {
-    position: relative;
     transform: scale(1.25);
     z-index: 5;
 }
@@ -1855,8 +1858,10 @@ ul.polaroids li a:hover {
 #content-wrapper{
     /* background-color: #faf2cc;
      background-color:#f8f8f8;
-    background-color: #f5f5dc;*/
+    background-color: #f5f5dc;
     background-color: #F0F0DF;
+    background-color: #FFF0BC;*/
+    background-color: #FFEBB2;
 }
 
 
@@ -1866,6 +1871,14 @@ ul.polaroids li a:hover {
     width: 50%;
     margin-right:20px;
     margin-top:40px;
+    font-family: 'Tangerine', cursive;
+    font-size: 44px;
+    line-height: 40px;
+    font-weight: bold;
+}
+#texte-rightContact{
+    float:right;
+    width: 48%;
 }
 
 .image-left{
@@ -1875,15 +1888,16 @@ ul.polaroids li a:hover {
 .bloc-caroussel{
     margin:10px auto 20px;
     text-align: center;
+    clear: both;
+    padding-top:1px;
 }
 
 #garniture {
-    margin:auto;
+    margin:25px auto auto;
 }
 #garniture li {
-    padding:5px;
+    padding:20px 10px 5px;
     list-style-type:none;
-    padding-top: 20px;
     position: relative;
     display: inline-table;
     text-align: center;
@@ -1897,7 +1911,7 @@ ul.polaroids li a:hover {
 #garniture a:after {
     content: attr(title);
     position: absolute;
-    top:140px;
+    top:145px;
     left:0;
     width:160px;
     text-align: center;
@@ -2046,7 +2060,7 @@ ul.polaroids li a:hover {
 
 .carousel-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: -40px;
     left: 50%;
     z-index: 15;
     width: 60%;
@@ -2063,7 +2077,7 @@ ul.polaroids li a:hover {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    border: 1px solid #ffffff;
+    border: 1px solid #333;
     border-radius: 10px;
 }
 
@@ -2071,7 +2085,7 @@ ul.polaroids li a:hover {
     width: 12px;
     height: 12px;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #DDD;
 }
 
 .carousel-caption {
@@ -2105,9 +2119,7 @@ ul.polaroids li a:hover {
         left: 20%;
         padding-bottom: 30px;
     }
-    .carousel-indicators {
-        bottom: 20px;
-    }
+
 }
 
 
@@ -2147,24 +2159,24 @@ ul.polaroids li a:hover {
     white-space: nowrap;
 }
 
+h1.presentationContact,h2.presentationContact,h3.presentationContact{
+    font-family: 'Tangerine', cursive;
+    font-size: 44px;
+    line-height: 40px;
+    font-weight: bold;
+}
 h1.presentationContact {
-    font-size: 17px;
     padding-right: 230px;
     text-align: right;
-    font-weight: normal;
     margin-top: 10px;
 }
 h2.presentationContact {
-    font-size: 17px;
     padding-right: 170px;
     text-align: right;
-    font-weight: normal;
 }
 h3.presentationContact {
-    font-size: 17px;
     padding-right: 130px;
     text-align: right;
-    font-weight: normal;
     margin: 0 0 0.5em;
 }
 
@@ -2179,8 +2191,8 @@ h3.presentationContact {
 
 
 .texteContact > h3 {
-    margin-top: 8px;
-    text-align: center;
+    display: inline;
+    font-size: 15px;
 }
 
 #contentContact{
@@ -2189,17 +2201,36 @@ h3.presentationContact {
 }
 
 .plan {
-    padding-right: 130px;
-    text-align: right;
     font-weight: normal;
     margin: 0 0 0.5em;
 }
 
 
-.texteContactright {
-    text-align: center;
+
+.texteContact {
+    margin-bottom:10px;
 }
 
 .form-error{
     color:red;
+}
+
+
+.image-left img {
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    border: 2px ridge #000000;
+}
+
+#carousel-example-generic img {
+    box-shadow: none;
+    border: none;
+}
+.carousel-inner{
+    box-shadow: 24px 21px 8px rgba(0, 0, 0, 0.5);
+}
+
+#garniture img{
+    border: 1px inset #000000;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    padding: 3px;
 }

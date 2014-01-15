@@ -10,8 +10,8 @@ $listeImage = divers::listeImageFromRep(REP_IMAGE . "garniture/" . $etape . "/me
         <ol class="carousel-indicators">
             <?php
             for ($i = 0; $i < count($listeImage); $i++) {
-                $active = ($i == 0) ? " active" : "";
-                echo '<li class="" data-slide-to="' . $i . '" data-target="#carousel-example-generic" class="' . $active . '"></li>';
+                $active = ($i == 0) ? "active" : "";
+                echo '<li data-slide-to="' . $i . '" data-target="#carousel-example-generic" class="' . $active . '"></li>';
             }
             ?>
         </ol>

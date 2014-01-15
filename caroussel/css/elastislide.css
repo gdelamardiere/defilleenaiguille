@@ -68,6 +68,7 @@
 .elastislide-horizontal ul li {
     height: 100%;
     display: inline-block;
+    margin-left:20px;
 }
 
 .elastislide-vertical ul li {

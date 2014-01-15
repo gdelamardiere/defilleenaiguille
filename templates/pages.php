@@ -2,10 +2,10 @@
 $listeJS = array(
     "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
     "caroussel/js/jquery.elastislide.js",
-    "js/caroussel.js",
+    "js/caroussel.js", "js/pages.js",
     "lightbox/js/prototype.js",
     "lightbox/js/scriptaculous.js?load=effects,builder",
-    "lightbox/js/lightbox.js"
+    "lightbox/js/lightbox.js",
 );
 require_once(TEMPLATE . 'header.php');
 $mainImage = divers::getOneRandomImageFromRep(PAGE . "/medium/");
@@ -27,7 +27,7 @@ $mainImage = divers::getOneRandomImageFromRep(PAGE . "/medium/");
             <?php
             $listeImage = divers::listeImageFromRep(REP_IMAGE . PAGE . "/small");
             foreach ($listeImage as $image) {
-                echo '<li><a href="' . FRONT_IMAGE . PAGE . '/' . $image . '" rel="lightbox"><img src="' . FRONT_IMAGE . PAGE . '/small/' . $image . '" alt="' . $image . '" /></a></li>';
+                echo '<li><img class="rise" src="' . FRONT_IMAGE . PAGE . '/small/' . $image . '" alt="' . $image . '" /></li>';
             }
             ?>
         </ul>
