@@ -7,12 +7,12 @@
     </ul>
 </div>
 </footer>
-<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700&v=<?php echo VERSION; ?>' rel='stylesheet' type='text/css'>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js?v=<?php echo VERSION; ?>"></script>
 
-<script src="<?php echo SITE_FRONT; ?>js/vendor/bootstrap.min.js"></script>
+<script src="<?php echo SITE_FRONT; ?>js/vendor/bootstrap.min.js?v=<?php echo VERSION; ?>"></script>
 <?php foreach ($listeJS as $js) { ?>
-    <script src="<?php echo SITE_FRONT . $js; ?>"></script>
+    <script src="<?php echo SITE_FRONT . $js; ?>?v=<?php echo VERSION; ?>"></script>
 <?php } ?>
 
 <script>
