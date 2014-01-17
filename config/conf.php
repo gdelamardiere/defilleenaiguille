@@ -33,7 +33,7 @@ define("REP_IMAGE_MEDIUM", REP_DATA . IMAGE_MINI . "/img/");
 define("REP_IMAGE_MINI", REP_DATA . IMAGE_MEDIUM . "/img/");
 define("REP_CLASSE", ROOT . "classes/");
 
-
+define("REP_LOGS", ROOT . "logs/");
 define("REP_ADMIN", ROOT . "configuration/");
 
 //-------------------------------------------------------------------------------
@@ -90,4 +90,4 @@ define('APPLI_TIMEOUT', '72000');
 define('DUREE_SESSION', 10800);
 
 //gestion des utilisateurs
-$USERS[1] = array("id" => 1, "user" => "DEFILLE", "password" => "b2b00d00994316334635e343ff852fc0", "role" => "SUPER_ADMINISTRATEUR", "actif" => 1);
+$USERS[1] = array("id" => 1, "user" => "DEFILLE", "password" => "f4d3ca249f90efd01004026cdfe6a580", "role" => "SUPER_ADMINISTRATEUR", "actif" => 1);

@@ -8,7 +8,14 @@ $listeJS = array(
     "lightbox/js/lightbox.js",
 );
 require_once(TEMPLATE . 'header.php');
-$mainImage = divers::getOneRandomImageFromRep(REP_IMAGE_MEDIUM . PAGE);
+if (PAGE == "mursetfenetres") {
+    $param = array("mursetfenetres/", "rideau/");
+} else if (PAGE == "lit") {
+    $param = array("lit/", "coussins/");
+} else {
+    $param = PAGE . "/";
+}
+$mainImage = divers::getOneRandomImageFromRep(REP_IMAGE_MEDIUM, $param);
 ?>
 <div id="content-wrapper" class="clearfix row">
     <div id="main-content">
@@ -17,17 +24,17 @@ $mainImage = divers::getOneRandomImageFromRep(REP_IMAGE_MEDIUM . PAGE);
         <div class="texte-right" ><?php include_once(REP_DATA . PAGE . '.html'); ?></div>
 
         <div class="image-left">
-            <a href="<?php echo FRONT_IMAGE . PAGE . "/" . $mainImage; ?>" rel="lightbox">
-                <img src="<?php echo FRONT_IMAGE_MEDIUM . PAGE . "/" . $mainImage; ?>" alt="<?php echo PAGE; ?>">
+            <a href="<?php echo FRONT_IMAGE . $mainImage; ?>" rel="lightbox">
+                <img src="<?php echo FRONT_IMAGE_MEDIUM . $mainImage; ?>" alt="<?php echo PAGE; ?>">
             </a>
         </div>
     </div>
     <div class="bloc-caroussel">
         <ul id="carousel" class="elastislide-list">
             <?php
-            $listeImage = divers::listeImageFromRep(REP_IMAGE_MINI . PAGE);
+            $listeImage = divers::listeImageFromRep(REP_IMAGE_MINI, $param);
             foreach ($listeImage as $image) {
-                echo '<li><img class="rise" src="' . FRONT_IMAGE_MINI . PAGE . "/" . $image . '" alt="' . $image . '" /></li>';
+                echo '<li><img class="rise" src="' . FRONT_IMAGE_MINI . $image . '" alt="' . $image . '" /></li>';
             }
             ?>
         </ul>

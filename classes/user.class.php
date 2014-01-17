@@ -132,7 +132,8 @@ class user
         global $USERS;
         $sPassword = md5(PREFIX_SALT . $sPassword . SUFFIX_SALT);
         $login = false;
-
+        /*  var_dump($sPassword);
+          die(); */
         foreach ($USERS as $ligne) {
             if (strtoupper($sLogin) == $ligne['user'] && $sPassword == $ligne['password']) {
                 list($this->nUserId, $this->sLogin, $this->sPassword, $this->sRole, $this->sActif) = array_values($ligne);

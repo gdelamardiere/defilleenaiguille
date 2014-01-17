@@ -19,8 +19,8 @@ require_once(TEMPLATE . 'header.php');
         <ul id="garniture">
             <?php
             for ($i = 1; $i <= 5; $i++) {
-                $image = divers::getOneRandomImageFromRep(REP_IMAGE_MINI . PAGE . "/etape" . $i);
-                echo '<li><a class="listeetapes" title="titre étape' . $i . '" id="etape' . $i . '" href="#"><img src="' . FRONT_IMAGE_MINI . PAGE . "/etape" . $i . "/" . $image . '" alt="titre étape' . $i . '"/></a></li>';
+                $image = divers::getOneRandomImageFromRep(REP_IMAGE_MINI, PAGE . "/etape" . $i . "/");
+                echo '<li><a class="listeetapes" title="titre étape' . $i . '" id="etape' . $i . '" href="#"><img src="' . FRONT_IMAGE_MINI . $image . '" alt="titre étape' . $i . '"/></a></li>';
             }
             ?>
         </ul>

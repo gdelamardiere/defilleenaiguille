@@ -685,11 +685,9 @@ p {
 
 b, strong {
     font-weight: bold;
-    color: #1a1a1a;
 }
 
 em, i {
-    color: #6d6d6d;
     font-style: italic;
 }
 
@@ -1865,8 +1863,9 @@ ul.polaroids li a:hover {
      background-color:#f8f8f8;
     background-color: #f5f5dc;
     background-color: #F0F0DF;
-    background-color: #FFF0BC;*/
-    background-color: #FFEBB2;
+    background-color: #FFF0BC;
+    background-color: #FFEBB2;*/
+    background-color: #F0F0DF;
 }
 
 
@@ -2250,3 +2249,6 @@ h2.logo a {
     padding: 3px;
 }
 
+.textarea{
+    margin-bottom:10px;
+}

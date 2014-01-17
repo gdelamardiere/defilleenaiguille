@@ -8,6 +8,7 @@
  */
 require_once(dirname(__FILE__) . '/bootstrap.inc.php');
 $title = "Pilotage";
+$listeJS = array();
 require_once(TEMPLATE . 'header_admin.php');
 ?>
 <div class="clearfix row">

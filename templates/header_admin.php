@@ -10,8 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>css/base3860.css?v=15">
-        <link rel="stylesheet" type="text/css" href="<?php echo SITE_FRONT; ?>caroussel/css/elastislide.css" />
-        <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>lightbox/css/lightbox.css" type="text/css" media="screen" />
+
 
     </head>
     <body>

@@ -8,6 +8,7 @@
  * @license view the LICENSE file that was distributed with this source code.
  */
 require_once(dirname(__FILE__) . '/bootstrap.inc.php');
+$listeJS = array();
 // task contient le traitement à effectuer : listage par défaut
 $sTask = divers::get_value_get_post('Task', '');
 // Récupération du login et du mot de passe saisis par l'utilisateur

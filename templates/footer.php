@@ -11,7 +11,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>')</script>
 
-<script src="js/vendor/bootstrap.min.js"></script>
+<script src="<?php echo SITE_FRONT; ?>js/vendor/bootstrap.min.js"></script>
 <?php foreach ($listeJS as $js) { ?>
     <script src="<?php echo SITE_FRONT . $js; ?>"></script>
 <?php } ?>

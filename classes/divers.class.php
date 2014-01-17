@@ -484,21 +484,41 @@ class divers
 
     /* debut */
 
-    public static function listeImageFromRep($rep)
+    public static function listeImageFromRep($rep_image, $rep)
     {
-
-        $iterator = new FilesystemIterator($rep);
-        $filter = new RegexIterator($iterator, '#\.(jpeg|jpg|png|bmp)$#i');
+        if (!is_array($rep)) {
+            $reps[] = $rep;
+        } else {
+            $reps = $rep;
+        }
         $filelist = array();
-        foreach ($filter as $entry) {
-            $filelist[] = $entry->getFilename();
+        foreach ($reps as $lien) {
+            $iterator = new FilesystemIterator($rep_image . $lien);
+            $filter = new RegexIterator($iterator, '#\.(jpeg|jpg|png|bmp)$#i');
+
+            foreach ($filter as $entry) {
+                $filelist[] = $lien . $entry->getFilename();
+            }
         }
         return $filelist;
     }
 
-    public static function getOneRandomImageFromRep($rep)
+    public static function listeHtmlFromRep($rep)
     {
-        $listeImage = self::listeImageFromRep($rep);
+
+        $iterator = new FilesystemIterator($rep);
+        $filter = new RegexIterator($iterator, '#\.(html)$#i');
+        $filelist = array();
+        foreach ($filter as $entry) {
+            $filelist[] = str_replace(".html", "", $entry->getFilename());
+        }
+        asort($filelist);
+        return $filelist;
+    }
+
+    public static function getOneRandomImageFromRep($rep_image, $rep)
+    {
+        $listeImage = self::listeImageFromRep($rep_image, $rep);
         $nb = count($listeImage);
         $image = "";
         if ($nb > 0) {

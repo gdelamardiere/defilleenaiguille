@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This file is part of the GOLF project.
  * Il s'agit du fichier racine du site. il affiche le formulaire de connection et redirige une fois connecté ver la page de pilotage
@@ -8,42 +7,34 @@
  * @license view the LICENSE file that was distributed with this source code.
  */
 require_once(dirname(__FILE__) . '/bootstrap.inc.php');
-// task contient le traitement à effectuer : listage par défaut
-$sTask = divers::get_value_get_post('Task', '');
 
-// Récupération du login et du mot de passe saisis par l'utilisateur
-$sLogin = divers::get_value_post("loginCrit");
-$sPassword = divers::get_value_post("passwordCrit");
-if (!empty($_GET['url_asked'])) {
-    $_SESSION['url_asked'] = $_GET['url_asked'];
-}
-
-// Connexion à l'application
-if ($sTask == 'login') {
-    // Vérifie que l'utilisateur peut bien se connecter avec ce login et ce mot de passe
-    if ($user->doLogin($sLogin, $sPassword) !== false) {
-        // Sauvegarde des valeurs importantes en session (ID_USER, Role, etc...)
-        if (!empty($_SESSION['url_asked'])) {
-            // Redirection vers la page appelée avant perte de la session
-            $sRedirectPage = $_SESSION['url_asked'];
-            $_SESSION['url_asked'] = '';
-        } else {
-            // Redirection vers la page par défaut
-            $sRedirectPage = 'pilotage.php';
-        }
-        divers::redirect($sRedirectPage);
-    }
-} else if ($sTask == 'deconnection') {
-    $user->doLogout();
-    $sRedirectPage = 'index.php';
-    divers::redirect($sRedirectPage);
-} else if (isset($_SESSION["connectedUserId"])) {
-    $sRedirectPage = 'pilotage.php';
-    divers::redirect($sRedirectPage);
-}
-$title = "Pilotage";
+$title = "gestion_images";
+$listeJS = array("configuration/ckeditor/ckeditor.js");
 require_once(TEMPLATE . 'header_admin.php');
-require_once(TEMPLATE . 'login.php');
+if (!empty($_POST['contenu'])) {
+    foreach ($_POST['contenu'] as $file => $value) {
+        file_put_contents(REP_DATA . $file . ".html", $value);
+    }
+}
+$listeFichier = divers::listeHtmlFromRep(REP_DATA);
+?>
+<div id="content-wrapper" class="clearfix row">
+    <div class="content-left twelve columns jquery-plugin">
+        <div id="contentContact" >
+            <form class="well span8" method="POST" action="<?php echo FRONT_ADMINISTRATION; ?>gestion_contenu.php">
+                <?php foreach ($listeFichier as $value) { ?>
+                    <div class="textarea">
+                        <label>contenu <?php echo $value; ?></label>
+                        <textarea class="ckeditor" id="<?php echo $value; ?>" name="contenu[<?php echo $value; ?>]" data-validation="required" rows="5"><?php echo file_get_contents(REP_DATA . $value . ".html"); ?></textarea>
+                    </div>
+                <?php } ?>
+                <button type="submit" class="btn btn-default active">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php
 require_once(TEMPLATE . 'footer.php');
 
 
