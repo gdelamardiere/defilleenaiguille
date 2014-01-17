@@ -330,9 +330,14 @@ textarea {
     min-height: 150px;
     resize: vertical;
 }
-
+#contentLogin{
+    width:30%;
+    margin:auto;
+}
 #contentContact input[type="text"],
 #contentContact input[type="email"],
+#contentLogin input[type="password"],
+#contentLogin input[type="text"],
 #contentContact textarea {
     color: #666;
     display:inherit;
@@ -2228,13 +2233,6 @@ h3.presentationContact {
 .carousel-inner{
     box-shadow: 24px 21px 8px rgba(0, 0, 0, 0.5);
 }
-
-#garniture img{
-    border: 1px inset #000000;
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
-    padding: 3px;
-}
-
 /*
 
 #container {
@@ -2246,3 +2244,9 @@ body {
 h2.logo a {
     background: url("images/logo-defilleenaiguille.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }*/
+#garniture img{
+    border: 1px inset #000000;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+    padding: 3px;
+}
+

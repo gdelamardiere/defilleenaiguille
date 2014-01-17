@@ -498,7 +498,7 @@ class divers
 
     public static function getOneRandomImageFromRep($rep)
     {
-        $listeImage = self::listeImageFromRep(REP_IMAGE . $rep);
+        $listeImage = self::listeImageFromRep($rep);
         $nb = count($listeImage);
         $image = "";
         if ($nb > 0) {

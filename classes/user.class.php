@@ -13,12 +13,6 @@ class user
 {
 
     /**
-     * @var instance de database
-     * @access private
-     */
-    private $pdo;
-
-    /**
      * @var Singleton
      * @access private
      * @static
@@ -51,7 +45,6 @@ class user
      */
     public function __construct($nUserId = 0, $bActiveUser = false)
     {
-        $this->pdo = database::getInstance();
         $this->nUserId = (int) $nUserId;
         $this->sRole = '';
         $this->sNomPrenom = '';
@@ -116,10 +109,10 @@ class user
      */
     private function loadUserAttributesWithId($nUserId)
     {
-        $users = import::getContenuCSV(REP_SETTINGS . "users.csv");
+        global $USERS;
         $login = false;
-        foreach ($users as $ligne) {
-            if ($nUserId == $ligne[0]) {
+        foreach ($USERS as $ligne) {
+            if ($nUserId == $ligne['id']) {
                 list($this->nUserId, $this->sLogin, $this->sPassword, $this->sRole, $this->sActif) = array_values($ligne);
                 $login = true;
             }
@@ -136,19 +129,30 @@ class user
      */
     private function loadUserAttributesWithLogin($sLogin, $sPassword)
     {
+        global $USERS;
         $sPassword = md5(PREFIX_SALT . $sPassword . SUFFIX_SALT);
-        $users = import::getContenuCSV(REP_SETTINGS . "users.csv");
         $login = false;
-        foreach ($users as $ligne) {
-            if (strtoupper($sLogin) == $ligne[1] && $sPassword == $ligne[2]) {
+
+        foreach ($USERS as $ligne) {
+            if (strtoupper($sLogin) == $ligne['user'] && $sPassword == $ligne['password']) {
                 list($this->nUserId, $this->sLogin, $this->sPassword, $this->sRole, $this->sActif) = array_values($ligne);
                 $login = true;
                 $this->toSession($ligne);
+                $_SESSION['KCFINDER'] = array();
+                $_SESSION['KCFINDER']['disabled'] = false;
+                $_SESSION['KCFINDER']['uploadURL'] = FRONT_DATA;
+                $_SESSION['KCFINDER']['maxImageWidth'] = IMAGE_MAX_WIDTH;
+                $_SESSION['KCFINDER']['maxImageHeight'] = IMAGE_MAX_HEIGHT;
+                $_SESSION['KCFINDER']['thumbWidth'] = MINIATURE_WIDTH;
+                $_SESSION['KCFINDER']['thumbHeight'] = MINIATURE_HEIGHT;
+                $_SESSION['KCFINDER']['thumbMediumWidth'] = MEDIUM_WIDTH;
+                $_SESSION['KCFINDER']['thumbMediumHeight'] = MEDIUM_HEIGHT;
+                $_SESSION['KCFINDER']['thumbsDir'] = IMAGE_MINI;
+                $_SESSION['KCFINDER']['thumbsMediumDir'] = IMAGE_MEDIUM;
             }
         }
         /* Changement de session ID (voir session hijacking) */
         session_regenerate_id();
-
         return $login;
     }
 
@@ -199,10 +203,6 @@ class user
         }
         if ($login) {
             $this->bUserLoaded = true;
-            logs::log("connection de l'utilisateur ", logs::INFO);
-        } else {
-            logs::log("tentative de connection de l'utilisateur " . $sLogin, logs::WARNING);
-            logs::setMessage("le couple login/password ne correspond pas", logs::ERROR);
         }
 
         return $login;
@@ -214,9 +214,9 @@ class user
      */
     private function toSession($ligne)
     {
-        $_SESSION['connectedUserId'] = $ligne[0];
-        $_SESSION['connectedUserName'] = $ligne[1];
-        $_SESSION['connectedUserRole'] = $ligne[3];
+        $_SESSION['connectedUserId'] = $ligne['id'];
+        $_SESSION['connectedUserName'] = $ligne['user'];
+        $_SESSION['connectedUserRole'] = $ligne['role'];
     }
 
     /**

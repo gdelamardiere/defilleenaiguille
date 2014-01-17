@@ -22,17 +22,17 @@ require_once(TEMPLATE . 'header.php');
                 <ul class="polaroids large-block-grid-4 small-block-grid-2">
                     <li>
                         <a title="les fauteuils" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "fauteuils/small/" . divers::getOneRandomImageFromRep("fauteuils/small/"); ?>" alt="fauteuil">
+                            <img src="<?php echo FRONT_IMAGE_MINI . "fauteuils/" . divers::getOneRandomImageFromRep(REP_IMAGE_MINI . "fauteuils/"); ?>" alt="fauteuil">
                         </a>
                     </li>
                     <li>
                         <a title="la teinture murale" href="<?php echo SITE_FRONT; ?>murs-et-fenetres.php">
-                            <img src="<?php echo FRONT_IMAGE . "coussins/small/" . divers::getOneRandomImageFromRep("coussins/small/"); ?>" alt="la teinture murale">
+                            <img src="<?php echo FRONT_IMAGE_MINI . "coussins/" . divers::getOneRandomImageFromRep(REP_IMAGE_MINI . "coussins/"); ?>" alt="la teinture murale">
                         </a>
                     </li>
                     <li>
-                        <a title="les rideaux" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "rideau/small/" . divers::getOneRandomImageFromRep("rideau/small/"); ?>" alt="les rideaux">
+                        <a title="les rideaux" href="<?php echo SITE_FRONT; ?>murs-et-fenetres.php">
+                            <img src="<?php echo FRONT_IMAGE_MINI . "rideau/" . divers::getOneRandomImageFromRep(REP_IMAGE_MINI . "rideau/"); ?>" alt="les rideaux">
                         </a>
                     </li>
                 </ul>
@@ -40,13 +40,13 @@ require_once(TEMPLATE . 'header.php');
             <div>
                 <ul class="polaroids large-block-grid-4 small-block-grid-2">
                     <li>
-                        <a title="le lit" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "lit/small/" . divers::getOneRandomImageFromRep("lit/small/"); ?>" alt="le lit">
+                        <a title="le lit" href="<?php echo SITE_FRONT; ?>lit.php">
+                            <img src="<?php echo FRONT_IMAGE_MINI . "lit/" . divers::getOneRandomImageFromRep(REP_IMAGE_MINI . "lit/"); ?>" alt="le lit">
                         </a>
                     </li>
                     <li>
-                        <a title="les coussins" href="<?php echo SITE_FRONT; ?>fauteuils.php">
-                            <img src="<?php echo FRONT_IMAGE . "coussins/small/" . divers::getOneRandomImageFromRep("coussins/small/"); ?>" alt="les coussins">
+                        <a title="les coussins" href="<?php echo SITE_FRONT; ?>lit.php">
+                            <img src="<?php echo FRONT_IMAGE_MINI . "coussins/" . divers::getOneRandomImageFromRep(REP_IMAGE_MINI . "coussins/"); ?>" alt="les coussins">
                         </a>
                     </li>
                 </ul>

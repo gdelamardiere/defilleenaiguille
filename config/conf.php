@@ -19,35 +19,34 @@ define("ROOT", dirname(__FILE__) . "/../");
  */
 define("VERSION", '1.0');
 
-//-------------------------------------------------------------------------------
-/**
- * connection à la base
- */
-//A CHANGER EN PRODUCTION
-define("HOSTNAME_BASE", "localhost");
-define("DATABASE_BASE", "golf");
-//A CHANGER EN PRODUCTION
-define("USERNAME_BASE", "root");
-//A CHANGER EN PRODUCTION
-define("PASSWORD_BASE", "");
-define("PREFIX_BASE", "");
-define("ENCODAGE_BDD", "latin1");
+
 //-------------------------------------------------------------------------------
 /**
  *  répertoire réel
  */
-define("TEMPLATE", ROOT . "templates/");
-define("REP_IMAGE", ROOT . "img/");
-define("REP_CLASSE", ROOT . "classes/");
+define("IMAGE_MINI", "small");
+define("IMAGE_MEDIUM", "medium");
 define("REP_DATA", ROOT . "data/");
+define("TEMPLATE", ROOT . "templates/");
+define("REP_IMAGE", REP_DATA . "img/");
+define("REP_IMAGE_MEDIUM", REP_DATA . IMAGE_MINI . "/img/");
+define("REP_IMAGE_MINI", REP_DATA . IMAGE_MEDIUM . "/img/");
+define("REP_CLASSE", ROOT . "classes/");
+
+
+define("REP_ADMIN", ROOT . "configuration/");
 
 //-------------------------------------------------------------------------------
 /**
  *  répertoire front
  */
-define("FRONT_IMAGE", SITE_FRONT . "img/");
+define("FRONT_DATA", SITE_FRONT . "data/");
+define("FRONT_IMAGE", FRONT_DATA . "img/");
+define("FRONT_IMAGE_MEDIUM", FRONT_DATA . IMAGE_MEDIUM . "/img/");
+define("FRONT_IMAGE_MINI", FRONT_DATA . IMAGE_MINI . "/img/");
 define("FRONT_CSS", SITE_FRONT . "css/");
-define("FRONT_ADMINISTRATION", SITE_FRONT . "administration/");
+define("FRONT_ADMINISTRATION", SITE_FRONT . "configuration/");
+
 
 
 
@@ -77,5 +76,18 @@ spl_autoload_register('divers::my_autoloader');
  * configuration des images
  */
 DEFINE("MINIATURE_HEIGHT", 120);
+DEFINE("MINIATURE_WIDTH", 300);
 DEFINE("IMAGE_MAX_HEIGHT", 700);
+DEFINE("IMAGE_MAX_WIDTH", 900);
 DEFINE("MEDIUM_HEIGHT", 360);
+DEFINE("MEDIUM_WIDTH", 500);
+
+//-------------------------------------------------------------------------------
+/**
+ *  Configuration des Sessions
+ */
+define('APPLI_TIMEOUT', '72000');
+define('DUREE_SESSION', 10800);
+
+//gestion des utilisateurs
+$USERS[1] = array("id" => 1, "user" => "DEFILLE", "password" => "b2b00d00994316334635e343ff852fc0", "role" => "SUPER_ADMINISTRATEUR", "actif" => 1);

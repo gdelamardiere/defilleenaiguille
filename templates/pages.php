@@ -8,7 +8,7 @@ $listeJS = array(
     "lightbox/js/lightbox.js",
 );
 require_once(TEMPLATE . 'header.php');
-$mainImage = divers::getOneRandomImageFromRep(PAGE . "/medium/");
+$mainImage = divers::getOneRandomImageFromRep(REP_IMAGE_MEDIUM . PAGE);
 ?>
 <div id="content-wrapper" class="clearfix row">
     <div id="main-content">
@@ -18,16 +18,16 @@ $mainImage = divers::getOneRandomImageFromRep(PAGE . "/medium/");
 
         <div class="image-left">
             <a href="<?php echo FRONT_IMAGE . PAGE . "/" . $mainImage; ?>" rel="lightbox">
-                <img src="<?php echo FRONT_IMAGE . PAGE . "/medium/" . $mainImage; ?>" alt="<?php echo PAGE; ?>">
+                <img src="<?php echo FRONT_IMAGE_MEDIUM . PAGE . "/" . $mainImage; ?>" alt="<?php echo PAGE; ?>">
             </a>
         </div>
     </div>
     <div class="bloc-caroussel">
         <ul id="carousel" class="elastislide-list">
             <?php
-            $listeImage = divers::listeImageFromRep(REP_IMAGE . PAGE . "/small");
+            $listeImage = divers::listeImageFromRep(REP_IMAGE_MINI . PAGE);
             foreach ($listeImage as $image) {
-                echo '<li><img class="rise" src="' . FRONT_IMAGE . PAGE . '/small/' . $image . '" alt="' . $image . '" /></li>';
+                echo '<li><img class="rise" src="' . FRONT_IMAGE_MINI . PAGE . "/" . $image . '" alt="' . $image . '" /></li>';
             }
             ?>
         </ul>
