@@ -1,7 +1,7 @@
 <?php
 define("PAGE", "garniture");
 $listeJS = array(
-    "js/main.js",
+    "js/main.min.js",
     "lightbox/js/lightbox-2.6.min.js"
 );
 require_once(dirname(__FILE__) . '/config/conf.php');
