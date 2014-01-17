@@ -3,9 +3,7 @@ $listeJS = array(
     "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
     "caroussel/js/jquery.elastislide.js",
     "js/caroussel.js", "js/pages.js",
-    "lightbox/js/prototype.js",
-    "lightbox/js/scriptaculous.js?load=effects,builder",
-    "lightbox/js/lightbox.js",
+    "lightbox/js/lightbox-2.6.min.js",
 );
 require_once(TEMPLATE . 'header.php');
 if (PAGE == "mursetfenetres") {
@@ -24,7 +22,7 @@ $mainImage = divers::getOneRandomImageFromRep(REP_IMAGE_MEDIUM, $param);
         <div class="texte-right" ><?php include_once(REP_DATA . PAGE . '.html'); ?></div>
 
         <div class="image-left">
-            <a href="<?php echo FRONT_IMAGE . $mainImage; ?>" rel="lightbox">
+            <a href="<?php echo FRONT_IMAGE . $mainImage; ?>" data-lightbox="<?php echo $mainImage; ?>"  >
                 <img src="<?php echo FRONT_IMAGE_MEDIUM . $mainImage; ?>" alt="<?php echo PAGE; ?>">
             </a>
         </div>
