@@ -11,7 +11,7 @@ header('x-ua-compatible: ie=edge');
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>css/base3860.css?v=<?php echo VERSION; ?>">
+        <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>css/base3860.min.css?v=<?php echo VERSION; ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo SITE_FRONT; ?>caroussel/css/elastislide.min.css?v=<?php echo VERSION; ?>" />
         <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>lightbox/css/lightbox.min.css?v=<?php echo VERSION; ?>" type="text/css" media="screen" />
 

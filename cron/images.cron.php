@@ -1,6 +1,6 @@
 <?php
 
-set_time_limit(0);
+//set_time_limit(0);
 require_once(dirname(__FILE__) . '/../config/conf.php');
 $all = (isset($_GET['all'])) ? true : false;
 image::redimensionnerImageFromRep("fauteuils", $all);

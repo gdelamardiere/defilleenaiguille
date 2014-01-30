@@ -502,7 +502,7 @@ label .field-description {
 body {
     -webkit-font-smoothing: antialiased;
     color: #333;
-    font: 15px/22.5px "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    font-size: 15px/22.5px "Convergence", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
 
@@ -634,7 +634,7 @@ h2.logo a {
 
 #main li {
     float: left;
-    font: normal normal 16px "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font: normal normal 16px "Convergence", Helvetica, Arial, Geneva, sans-serif;
     margin-right: 2px;
 }
 
@@ -704,7 +704,7 @@ hr {
 }
 
 #content blockquote p {
-    font: italic normal 23px/26px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font: italic normal 23px/26px "Convergence", Helvetica, Arial, Geneva, sans-serif;
     color: #828282;
     margin-left: 0;
     margin-bottom: 0;
@@ -765,7 +765,7 @@ hr {
     height: 19px;
     width: 19px;
     padding-top: 0px;
-    font: bold 11px/19px "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+    font: bold 11px/19px "Convergence", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
     border-radius: 12px;
 }
 
@@ -942,8 +942,7 @@ footer .footer-site-links li a:before {
 footer .footer-site-links li:hover a,
 footer .footer-site-links li a,
 footer .footer-site-links li:hover a:before {
-    font-family: 'Tangerine', cursive;
-    font-size: 44px;
+    font-size: 21px;
     line-height: 40px;
     font-weight: bold;
     color:white;
@@ -1781,7 +1780,6 @@ ul.polaroids a {
     color: #333333;
     display: inline;
     float: left;
-    font-family: "Marker Felt",sans-serif;
     font-size: 18px;
     margin: 0 0 27px 30px;
     padding: 10px 10px 15px;
@@ -1874,10 +1872,6 @@ ul.polaroids li a:hover {
     width: 50%;
     margin-right:20px;
     margin-top:40px;
-    font-family: 'Tangerine', cursive;
-    font-size: 44px;
-    line-height: 40px;
-    font-weight: bold;
 }
 #texte-rightContact{
     float:right;
@@ -2050,7 +2044,6 @@ ul.polaroids li a:hover {
     height: 20px;
     margin-top: -10px;
     margin-left: -10px;
-    font-family: serif;
 }
 
 .carousel-control .icon-prev:before {
@@ -2163,10 +2156,8 @@ ul.polaroids li a:hover {
 }
 
 h1.presentationContact,h2.presentationContact,h3.presentationContact{
-    font-family: 'Tangerine', cursive;
-    font-size: 44px;
-    line-height: 40px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: normal;
 }
 h1.presentationContact {
     padding-right: 230px;
@@ -2255,4 +2246,12 @@ h2.logo a {
 .chromeframe,.chromeframe a{
     font-size: 18px;
     color:white;
+}
+
+body{
+    font-family: 'Convergence', sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+    color: #000000;
 }

@@ -1,34 +1,35 @@
 /**
- * @license Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or http://ckeditor.com/license
+ * @license Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 
-CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here.
-	// For the complete reference:
-	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
+CKEDITOR.editorConfig = function(config) {
+    config.toolbar = [
+        {name: 'document', groups: ['mode', 'document', 'doctools'], items: ['Source', '-', 'Save']},
+        {name: 'clipboard', groups: ['clipboard', 'undo'], items: ['Undo', 'Redo']},
+        {name: 'basicstyles', groups: ['basicstyles', 'cleanup'], items: ['Bold', 'Italic', 'Underline']},
+        {name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align'], items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']},
+        '/',
+        {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
+        {name: 'colors', items: ['TextColor']}
 
-	// The toolbar groups arrangement, optimized for a single toolbar row.
-	config.toolbarGroups = [
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
-		{ name: 'forms' },
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		{ name: 'styles' },
-		{ name: 'colors' },
-		{ name: 'tools' },
-		{ name: 'others' },
-		{ name: 'about' }
-	];
+    ];
+// Toolbar groups configuration.
+    config.toolbarGroups = [
+        {name: 'document', groups: ['mode', 'document', 'doctools']},
+        {name: 'clipboard', groups: ['clipboard', 'undo']},
+        {name: 'basicstyles', groups: ['basicstyles', 'cleanup']},
+        {name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align']},
+        '/',
+        {
+            name: 'styles'
+        }
+        ,
+        {
+            name: 'colors'
+        }
 
-	// The default plugins included in the basic setup define some buttons that
-	// we don't want too have in a basic editor. We remove them here.
-	config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor,Underline,Strike,Subscript,Superscript';
+    ];
 
-	// Let's have it basic on dialogs as well.
-	config.removeDialogTabs = 'link:advanced';
+    config.font_names = 'Convergence;' + config.font_names;
 };

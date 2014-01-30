@@ -56,10 +56,11 @@ require_once(TEMPLATE . 'header.php');
         <div id="texte-rightContact" >
             <div class="plan">
                 <iframe width="425" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Boulogne-Billancourt+23+rue+michelet&amp;aq=&amp;sll=48.946857,2.291336&amp;sspn=0.391883,1.056747&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=23+Rue+Michelet,+92100+Boulogne-Billancourt&amp;ll=48.837125,2.230911&amp;spn=0.011299,0.018282&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.fr/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=Boulogne-Billancourt+23+rue+michelet&amp;aq=&amp;sll=48.946857,2.291336&amp;sspn=0.391883,1.056747&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=23+Rue+Michelet,+92100+Boulogne-Billancourt&amp;ll=48.837125,2.230911&amp;spn=0.011299,0.018282&amp;z=15&amp;iwloc=A" style="color:#0000FF;text-align:left">Agrandir le plan</a></small>
-            </div>
-            <div class="texteContact">Nous sommes joignables tous les jours au <h3>01.82.15.80.86</h3></div>
+            </div>  
+            <div class="texteContact">Nous sommes joignables tous les jours au <h3 itemprop="tel">01.82.15.80.86</h3></div>
             <div class="texteContactright">Nous nous déplaçons gratuitement pour vos devis</div>
             <div class="texteContactright">et serons ravis de vous faire part de toutes nos idées</div>
+            
         </div>
     </div>
 </div>
