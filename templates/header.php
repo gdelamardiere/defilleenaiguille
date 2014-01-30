@@ -24,7 +24,7 @@ header('x-ua-compatible: ie=edge');
         <div id="container">
             <div id="logo-events" class="constrain clearfix">
                 <h2 class="logo"><a href="http://defilleenaiguille" title="De Fille en aiguille">De Fille en aiguille</a></h2>
-
+                <img src="<?php echo SITE_FRONT; ?>test/test2.gif"/>
 
             </div>
 
