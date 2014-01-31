@@ -8,13 +8,17 @@ header('x-ua-compatible: ie=edge');
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
+        <title><?php echo TITLE; ?></title>
+        <meta name="description" content="<?php echo $description; ?>">
+        <meta property="og:description" content="<?php echo $description; ?>">
+        <meta name="keywords" content="<?php echo $keywords; ?>">
+        <meta property="og:title" content="<?php echo TITLE; ?>">
+        <meta property="og:type"  content="company">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>css/base3860.min.css?v=<?php echo VERSION; ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo SITE_FRONT; ?>caroussel/css/elastislide.min.css?v=<?php echo VERSION; ?>" />
         <link rel="stylesheet" href="<?php echo SITE_FRONT; ?>lightbox/css/lightbox.min.css?v=<?php echo VERSION; ?>" type="text/css" media="screen" />
-
+        <link href='http://fonts.googleapis.com/css?family=Convergence?v=<?php echo VERSION; ?>' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 8]>

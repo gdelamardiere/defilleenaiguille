@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /configuration/
+Sitemap: http://gdelamardiere.fr/defilleenaiguille/sitemaps.xml

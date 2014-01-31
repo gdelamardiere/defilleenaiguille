@@ -1,5 +1,8 @@
 <?php
 define("PAGE", "garniture");
+define("TITLE", "tapissier utilisant une garniture traditionnelle à Boulogne Billancourt - de fille en aiguille");
+$description = "Donnez un nouveau souffle à votre appartement. Habiller les murs, les fauteuils, les lits, les fenêtres. Frappez chez De fille en aiguille vous verrez, elles sont pleines d'idées";
+$keywords = "tapissier décorateur, restauration de fauteuils à Boulogne Billancourt,23 Rue Michelet‎ 92100 Boulogne-Billancourt";
 $listeJS = array(
     "js/main.min.js",
     "lightbox/js/lightbox-2.6.min.js"

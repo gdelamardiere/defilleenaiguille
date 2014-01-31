@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/prestations.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/fauteuils.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/une-garniture-traditionnelle.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/murs-et-fenetres.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/le-lit.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://gdelamardiere.fr/defilleenaiguille/contact.php</loc>
+		<lastmod>2014-01-31</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+</urlset>
