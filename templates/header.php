@@ -22,10 +22,8 @@ header('x-ua-compatible: ie=edge');
         <![endif]-->
 
         <div id="container">
-            <div id="logo-events" class="constrain clearfix">
+            <div id="logo-events" class="constrain clearfix" style="background-image: url(<?php echo SITE_FRONT; ?>css/images/logo.gif?rand=<?php echo time(); ?>);">
                 <h2 class="logo"><a href="http://defilleenaiguille" title="De Fille en aiguille">De Fille en aiguille</a></h2>
-                <img src="<?php echo SITE_FRONT; ?>test/test2.gif"/>
-
             </div>
 
             <div id="main" class="constrain clearfix">

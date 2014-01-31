@@ -1,8 +1,15 @@
 <?php
-define("PAGE", "prestations");
+if (!defined("PAGE")) {
+    define("PAGE", "prestations");
+}
+
 require_once(dirname(__FILE__) . '/config/conf.php');
-$listeJS = array(
-);
+if (PAGE == "accueil") {
+    $listeJS = array("lightbox/js/lightbox-2.6.min.js");
+} else {
+    $listeJS = array();
+}
+
 require_once(TEMPLATE . 'header.php');
 ?>
 <div id="content-wrapper" class="clearfix row">

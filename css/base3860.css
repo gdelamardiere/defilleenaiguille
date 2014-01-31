@@ -620,6 +620,8 @@ h2.logo a {
     box-shadow: rgba(255,255,255,0.3) 0 1px 0, rgba(0,0,0,0.3) 0 -1px 0;
     -webkit-box-shadow: 0 0 3px rgba(1, 1, 1, 0.7);
     box-shadow: 0 0 5px rgba(1, 1, 1, 0.7);
+    position:relative;
+    z-index: 10;
 }
 
 
@@ -1123,6 +1125,8 @@ footer .bottom { margin: 0 10% 0 0; }
         margin-left: auto;
         margin-right: auto;
     }
+
+
 
     nav#main {
         background-color: rgba(0, 0, 0, 0.0);
@@ -2254,4 +2258,9 @@ body{
 
 a, a:hover, a:focus, a:active {
     color: #000000;
+}
+
+#logo-events{
+    background-repeat: no-repeat;
+    background-position: 260px bottom;
 }
