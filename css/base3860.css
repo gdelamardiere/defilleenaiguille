@@ -2252,7 +2252,7 @@ h2.logo a {
     color:white;
 }
 
-body{
+body,#main li,#content blockquote p,#content ol > li:before{
     font-family: 'Convergence', sans-serif;
 }
 

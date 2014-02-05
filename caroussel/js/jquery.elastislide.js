@@ -247,9 +247,7 @@
             // total number of items
             this.itemsCount = this.$items.length;
             if (this.itemsCount === 0) {
-
                 return false;
-
             }
             this._validate();
             // remove white space
@@ -545,19 +543,23 @@
             this.options.onBeforeSlide();
 
             this.isSliding = true;
-
+            var total = 0;
+            $("#carousel li").each(function() {
+                total = total + $(this).outerWidth(true);
+            });
+            // alert(total);
             var self = this,
                     translation = this.translation || 0,
                     // width/height of an item ( <li> )
                     itemSpace = this.options.orientation === 'horizontal' ? this.$items.outerWidth(true) : this.$items.outerHeight(true),
                     // total width/height of the <ul>
-                    totalSpace = this.itemsCount * itemSpace,
+                    // totalSpace = this.itemsCount * itemSpace,
+                    totalSpace = total,
                     // visible width/height
                     visibleSpace = this.options.orientation === 'horizontal' ? this.$carousel.width() : this.$carousel.height();
-
             if (tvalue === undefined) {
 
-                var amount = this.fitCount * itemSpace;
+                var amount = $(".elastislide-carousel").outerWidth(true) - itemSpace;
 
                 if (amount < 0) {
 
