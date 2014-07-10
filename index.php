@@ -6,6 +6,6 @@ $description = "Donnez un nouveau souffle à votre appartement. Habiller les mur
 $keywords = "tapissier décorateur, restauration de fauteuils à Boulogne Billancourt,23 Rue Michelet‎ 92100 Boulogne-Billancourt";
 $cookie = (isset($_COOKIE["animation"])) ? true : false;
 if (!$cookie) {
-    setcookie("animation", "1", time() + 60 * 60 * 24);
+    //setcookie("animation", "1", time() + 60 * 60 * 24);
 }
 require_once(dirname(__FILE__) . '/prestations.php');

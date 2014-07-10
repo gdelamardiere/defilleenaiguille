@@ -11,13 +11,13 @@
  * Config globales
  */
 //A CHANGER EN PRODUCTION
-define("SITE_FRONT", "http://defilleenaiguille/"); //ATTENTION AU / FINAL !!!!!
+define("SITE_FRONT", "http://gdelamardiere.fr/defilleenaiguille/"); //ATTENTION AU / FINAL !!!!!
 define("ROOT", dirname(__FILE__) . "/../");
 //-------------------------------------------------------------------------------
 /**
  *  Numéro de version
  */
-define("VERSION", '1.0');
+define("VERSION", '1.5');
 
 
 //-------------------------------------------------------------------------------
@@ -29,11 +29,11 @@ define("IMAGE_MEDIUM", "medium");
 define("REP_DATA", ROOT . "data/");
 define("TEMPLATE", ROOT . "templates/");
 define("REP_IMAGE", REP_DATA . "img/");
-define("REP_IMAGE_MEDIUM", REP_DATA . IMAGE_MINI . "/img/");
-define("REP_IMAGE_MINI", REP_DATA . IMAGE_MEDIUM . "/img/");
+define("REP_IMAGE_MEDIUM", REP_DATA . IMAGE_MEDIUM . "/img/");
+define("REP_IMAGE_MINI", REP_DATA . IMAGE_MINI . "/img/");
 define("REP_CLASSE", ROOT . "classes/");
+ define("REP_LOGS", ROOT . "logs/");
 
-define("REP_LOGS", ROOT . "logs/");
 define("REP_ADMIN", ROOT . "configuration/");
 
 //-------------------------------------------------------------------------------
